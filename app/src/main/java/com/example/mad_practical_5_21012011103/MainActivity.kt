@@ -17,6 +17,22 @@ class MainActivity : AppCompatActivity() {
         val buttonBrowse:Button=findViewById(R.id.button_browse)
         val editurl:EditText=findViewById(R.id.edittexturl)
         buttonBrowse.setOnClickListener { openBrowser(editurl.text.toString()) }
+
+        val buttonCall : Button =findViewById(R.id.button_call)
+        val editCall : EditText = findViewById(R.id.editcall)
+        buttonCall.setOnClickListener{ doCall(editCall.text.toString())}
+
+        val buttonOpenCallLog : Button =findViewById(R.id.button_callLog)
+        buttonOpenCallLog.setOnClickListener{openCallLog()}
+
+        val buttonGallery : Button = findViewById(R.id.button_gallery)
+        buttonGallery.setOnClickListener { openGallery() }
+
+        val buttonCamera : Button =findViewById(R.id.button_camera)
+        buttonCamera.setOnClickListener { openCamera() }
+
+        val buttonAlarm : Button =findViewById(R.id.button_alarm)
+        buttonAlarm.setOnClickListener { openAlarm() }
     }
     fun openBrowser(url:String){
         Intent(Intent.ACTION_VIEW, Uri.parse(url)).also { startActivity(it) }
