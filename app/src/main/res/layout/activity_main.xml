@@ -10,6 +10,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:width="200dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="80dp"
         android:text="Web Url:"
@@ -18,8 +19,8 @@
 
     <EditText
         android:id="@+id/edittexturl"
-        android:layout_width="205dp"
-        android:layout_height="43dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:inputType="text"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
         app:layout_constraintEnd_toStartOf="@+id/button_browse"
